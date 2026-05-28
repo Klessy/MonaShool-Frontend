@@ -27,3 +27,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: domains/monaschool.ng/public_html/
+          dangerous-clean-slate: true
