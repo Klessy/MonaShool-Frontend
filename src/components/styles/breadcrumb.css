@@ -1,0 +1,76 @@
+.breadcrumb__section {
+  background-image: url("../../assets/bg/eduvibe-breadcrumb-bg.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  text-align: left;
+  background-color: #fff6f6;
+  overflow: hidden;
+}
+
+.breadcrumb__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.breadcrumb__title {
+  margin: 0 0 5px 0;
+  font-size: 40px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  font-weight: 900;
+}
+
+.breadcrumb__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.breadcrumb__link li a {
+  /* color: #54595f; */
+  color: #7a7a7a;
+}
+
+.shape-image-1 {
+  position: absolute;
+  bottom: 10px;
+  right: 45%;
+}
+
+.shape-image-2 {
+  position: absolute;
+  top: 30px;
+  right: 22%;
+}
+
+.shape-image-3 {
+  position: absolute;
+  top: 50px;
+  right: -30px;
+}
+
+/*============================= MOBILE VIEW =========================*/
+@media screen and (max-width: 900px) {
+  .shape-image-1,
+  .shape-image-2,
+  .shape-image-3 {
+    display: none;
+  }
+
+  .breadcrumb__title {
+    font-size: 32px;
+  }
+
+  .breadcrumb__link {
+    gap: 0.7rem;
+  }
+
+  .breadcrumb__link li a {
+    font-size: 18px;
+  }
+}

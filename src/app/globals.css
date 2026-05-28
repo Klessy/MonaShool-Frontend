@@ -1,0 +1,606 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+:root {
+  /* --primary-hue: 210;
+  --gray-hue: 280; */
+  --primary-color-hue: 252;
+  --primary-hue: 210;
+  --gray-hue: 240;
+  --color-p: hsl(var(--primary-color-hue), 75%, 60%);
+  --color-primary: hsl(var(--primary-hue), 100%, 50%);
+  --color-primary-variant: hsl(var(--gray-hue), 100%, 65%);
+  --color-secondary: #ffb116;
+  --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
+  --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
+  --color-gray-300: hsl(var(--gray-hue), 24%, 64%);
+  --color-gray-400: hsl(var(--gray-hue), 16%, 41%);
+  --color-gray-500: hsl(var(--gray-hue), 44%, 25%);
+  --color-gray-600: hsl(var(--gray-hue), 48%, 15%);
+
+  --transition: all 500ms ease;
+  --container-width-lg: 84%;
+  --container-width-md: 92%;
+
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  /* ============== MONA SCHOOL BRAND STYLES ============== */
+/* 🌞 MONA SCHOOL BRAND COLORS */
+/* Generated from the smiling sun yellow/orange tones */
+
+/* PRIMARY YELLOW SCALE */
+--sun-50:  #fffdf2;   /* very very light */
+--sun-100: #fff9db;
+--sun-200: #fff1a8;
+--sun-300: #ffe66d;
+--sun-400: #ffdc3d;
+--sun-500: #ffd21a;   /* main brand yellow */
+--sun-600: #f5c400;
+--sun-700: #d9ab00;
+--sun-800: #b88f00;
+--sun-900: #8f6d00;   /* very dark mustard */
+
+/* ORANGE ACCENT SCALE */
+--sun-orange-50:  #fff7f0;
+--sun-orange-100: #ffe7d1;
+--sun-orange-200: #ffd0a3;
+--sun-orange-300: #ffb266;
+--sun-orange-400: #ff9633;
+--sun-orange-500: #ff7f0f;  /* primary orange */
+--sun-orange-600: #e96f00;
+--sun-orange-700: #c95e00;
+--sun-orange-800: #9e4900;
+--sun-orange-900: #733500;
+
+/* OPTIONAL NEUTRAL COLORS THAT MATCH THE BRAND */
+--mona-white: #ffffff;
+--mona-offwhite: #f8fafc;
+--mona-light: #eef2f7;
+--mona-gray: #64748b;
+--mona-dark: #1e293b;
+--mona-black: #0f172a;
+
+
+
+  /* ============== ALTERNATIVE STYLES ============== */
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --vivid-orange: #ff6900;
+  --vivid-amber: #fcb900;
+  --color-heading: #231f40;
+  --color-dark: #231f40;
+  --semi-darkBlue: #200769;
+  --light-blue: #01bafd;
+  --dark-blue: #170d36;
+  --color-primary: #525fe1;
+  --color-border: #eeeeee;
+  --color-body: #6f6b80;
+  --color-star: #ffb608;
+  --color-shade: #f5f5f5;
+  /* --color-primary: #525FE1;
+    --color-secondary: #F86F03; */
+  --wp--preset--gradient--blush-light-purple: linear-gradient(
+    135deg,
+    rgb(255, 206, 236) 0%,
+    rgb(152, 150, 240) 100%
+  );
+  --wp--preset--gradient--blush-bordeaux: linear-gradient(
+    135deg,
+    rgb(254, 205, 165) 0%,
+    rgb(254, 45, 45) 50%,
+    rgb(107, 0, 62) 100%
+  );
+  --wp--preset--gradient--luminous-dusk: linear-gradient(
+    135deg,
+    rgb(255, 203, 112) 0%,
+    rgb(199, 81, 192) 50%,
+    rgb(65, 88, 208) 100%
+  );
+  --wp--preset--gradient--pale-ocean: linear-gradient(
+    135deg,
+    rgb(255, 245, 203) 0%,
+    rgb(182, 227, 212) 50%,
+    rgb(51, 167, 181) 100%
+  );
+  --wp--preset--gradient--electric-grass: linear-gradient(
+    135deg,
+    rgb(202, 248, 128) 0%,
+    rgb(113, 206, 126) 100%
+  );
+  --wp--preset--gradient--midnight: linear-gradient(
+    135deg,
+    rgb(2, 3, 129) 0%,
+    rgb(40, 116, 252) 100%
+  );
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  resize: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* GENERAL STYLES */
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin-inline: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--mona-dark);
+  margin-bottom: 2rem;
+}
+
+/* h4 {
+  font-size: 2.5rem;
+} */
+
+h6 {
+  font-size: 2rem;
+  color: var(--color-heading);
+}
+
+p {
+  font-size: 1.4rem;
+  color: var(--mona-black);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: var(--white);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mr-4 {
+  margin-right: 1.5rem;
+}
+
+.text-black {
+  color: var(--mona-black);
+}
+
+.text-sm {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  line-height: 1.75rem;
+  color: #6f6b80;
+}
+
+.text-xl {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 500;
+  line-height: 1.75rem; /* 28px */
+  color: #6f6b80;
+}
+
+.text-2xl {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.bg-2 {
+  background: #525fe11a;
+  color: var(--primary);
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/*** Button Start ***/
+.btn {
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.btn-square {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #faf9fb;
+  margin-right: 1rem;
+}
+
+.btn-sm-square {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* background-color: #faf9fb; */
+  background-color: var(--mona-black);
+  color: var(--white);
+  margin-right: 1rem;
+}
+
+.btn-md-square {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #faf9fb;
+  margin-right: 1rem;
+}
+
+.btn-lg-square {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #faf9fb;
+  margin-right: 1rem;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  box-shadow: inset 0 0 0 0 var(--mona-black);
+}
+
+.btn.btn-primary:hover {
+  box-shadow: inset 300px 0 0 0 var(--sun-100) !important;
+  color: var(--mona-black) !important;
+}
+
+.btn.btn-light {
+  box-shadow: inset 0 0 0 0 var(--mona-black);
+}
+
+.btn.btn-light:hover {
+  box-shadow: inset 300px 0 0 0 var(--mona-black);
+  color: var(--sun-100) !important;
+}
+
+.btn-hover {
+  transition: 0.5s;
+}
+
+.btn-hover:hover {
+  color: var(--mona-black) !important;
+}
+
+.border {
+  border: 1px solid;
+}
+
+/* .text-light {
+  color: #faf9fb !important;
+} */
+
+.scroll__con {
+  position: relative;
+}
+
+.scroll__top {
+  background-color: var(--white);
+  box-shadow: 5px 5px 18px 0px rgba(21, 183, 236, 0.3);
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 0;
+  /* top: 50%; */
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 99;
+  transition: all 300ms ease;
+  /* animation: scroll__to-top 2s ease-in forwards; */
+}
+
+.show-scroll {
+  /* opacity: 1; */
+  /* position: absolute; */
+  right: 50px;
+  overflow: hidden;
+}
+
+.hide-scroll {
+  /* opacity: 0; */
+  /* position: absolute; */
+  right: -50px;
+  overflow: hidden;
+}
+
+@keyframes scroll__to-top {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .show-scroll {
+    right: 20px;
+  }
+
+  .hide-scroll {
+    right: -50px;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pre-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: var(--mona-gray);
+  background: var(--mona-offwhite);
+  box-shadow: 0 0 2px rgba(1, 70, 94, 0.2);
+
+  /* color: var(--sun-orange-500);
+  background-color: var(--sun-50);
+  box-shadow: 0px 2px 3px rgba(255, 127, 15, 0.2); */
+
+  /* background: rgba(255, 255, 205, 1);
+  color: rgba(0, 50, 100);
+  box-shadow: 0 2px 3px rgba(119, 96, 5, 0.2); */
+  padding: 0.2rem 0.9rem;
+  border-radius: 10px;
+}
+
+.btn_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #fff;
+
+  background-color: transparent;
+  /* background-image: linear-gradient(230deg, #004fe1 0%, #3478f6 100%); */
+   background-image: linear-gradient(135deg, var(--sun-500), var(--sun-orange-500));
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: rgba(255, 255, 255, 0);
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 6px 6px 6px 6px;
+  padding: 17px 35px 16px 25px;
+  width: fit-content;
+  transition: background-image 0.5s ease-in;
+}
+
+.btn_main:hover {
+  background: var(--sun-600);
+}
+
+/* spinner */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #00000042;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  right: 43%;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .btn {
+  background-color: transparent;
+  background-image: linear-gradient(230deg, #004fe1 0%, #3478f6 100%);
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: rgba(255, 255, 255, 0);
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 6px 6px 6px 6px;
+  padding: 17px 35px 16px 25px;
+} */
+
+@media screen and (max-width: 900px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* h4 {
+    font-size: 2rem;
+  } */
+
+  h6 {
+    font-size: 1.6rem;
+  }
+
+  .pre-title {
+    font-size: 1.2rem;
+  }
+
+  .text-white {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px 20px 9px 15px;
+  }
+
+  .btn_main {
+    font-size: 12px;
+    padding: 10px 20px 9px 15px;
+  }
+}
+
+/* .flex {
+  display: flex;
+} */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sun-600) #ffffff;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--sun-600);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--sun-600);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--sun-600);
+}

@@ -1,0 +1,151 @@
+.footer__section {
+  /* background-image: linear-gradient(
+    135deg,
+    rgb(2, 3, 129) 0%,
+    rgb(40, 116, 252) 100%
+  ); */
+  background: #020617;
+}
+
+.footer__container {
+  /* padding: 10rem 0; */
+  padding: 130px 0px 110px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  /* font-size: 1.5rem; */
+}
+
+.footer__address {
+  color: var(--white);
+}
+
+.footer__address li {
+  color: var(--white);
+}
+
+.footer__address li a {
+  font-size: 18px;
+}
+
+.footer__address h5 {
+  padding-bottom: 10px;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.footer__address p {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.footer__address ul li {
+  /* padding-bottom: 10px; */
+  font-size: 18px;
+}
+
+ul.footer__location li {
+  display: flex;
+  gap: 1rem;
+  /* justify-content: center; */
+  align-items: center;
+  line-height: 2;
+}
+
+ul.footer__location a i {
+  font-size: 25px;
+  color: var(--white);
+}
+
+ul.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__courses li a {
+  color: rgba(255,255,255,0.75);
+  transition: var(--transition);
+  line-height: 1.7;
+}
+
+.footer__courses li a:hover {
+  color: var(--white);
+  letter-spacing: 0.2px;
+  font-weight: 600;
+}
+
+.footer__address-link li a {
+  color: rgba(255,255,255,0.75);
+  transition: var(--transition);
+  line-height: 1.7;
+}
+
+.footer__address-link li a:hover {
+  color: var(--sun-400);
+  letter-spacing: 0.2px;
+  font-weight: 600;
+}
+
+.footer__socials > li {
+  width: 50px;
+  height: 50px;
+  /* background-color: #9ee8ff; */
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.footer__socials > li:hover {
+  transform: translateY(-8px);
+}
+
+.copyright {
+  color: var(--white);
+  border-top: 0.1px solid #9ee8ff;
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 0.8rem;
+  color: var(--white);
+}
+
+/* ============================ MOBILE VIEW ====================== */
+@media screen and (max-width: 1200px) {
+  .footer__container {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer__address li a {
+    font-size: 16px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .footer__address h5 {
+    font-size: 20px;
+  }
+
+  .footer__address p {
+    font-size: 18px;
+  }
+
+  .footer__address ul li {
+    /* padding-bottom: 10px; */
+    font-size: 16px;
+  }
+
+  .footer__socials > li {
+    width: 40px;
+    height: 40px;
+  }
+}

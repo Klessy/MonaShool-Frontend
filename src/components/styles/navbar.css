@@ -1,0 +1,405 @@
+/*** Topbar Start ***/
+.fixed-top {
+  transition: 0.5s;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 10px 2px 20px;
+  background-color: #fff;
+  height: 45px;
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+
+.topbar__address {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  /* gap: 2rem; */
+}
+
+.topbar__social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.topbar a,
+.topbar a i {
+  transition: 0.5s;
+  /* color: var(--black); */
+}
+
+.topbar a:hover,
+.topbar a i:hover {
+  color: var(--sun-600) !important;
+}
+
+@media (max-width: 576px) {
+  .topbar {
+    display: none;
+  }
+}
+/*** Topbar End ***/
+
+nav {
+  background-color: var(--clr-white);
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  width: 100%;
+  /* position: relative; */
+  /* background: var(--clr-primary-1); */
+  background: var(--mona-black);
+  /* box-shadow: 0 0 1rem var(--color-p); */
+}
+
+.navbar__links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.login-desktop {
+  color: var(--white);
+  font-size: 16px;
+}
+
+.mobile-logo {
+  width: 65px;
+  height: 65px;
+  display: none;
+}
+
+.mobile-logo img {
+  object-fit: cover;
+}
+
+.thinktech-img {
+  object-fit: cover;
+}
+
+.company_name {
+  font-size: 3rem;
+  /* text-transform: capitalize; */
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--dark-blue);
+  text-shadow: -1.5px 1.5px var(--primary);
+}
+
+.active-nav {
+  font-size: 17px;
+  font-weight: 400;
+  /* background: rgb(24, 59, 231); */
+  background: var(--sun-700);
+  color: var(--white);
+  /* color: var(--mona-black); */
+  padding: 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  /* transition: var(--transition); */
+}
+
+.navbar__links li a {
+  /* color: #7a7a7a; */
+  color: var(--white);
+  font-size: 16px;
+}
+
+.navbar__img h1 {
+  font-size: 30px;
+  color: darkblue;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.mobile__menu {
+  display: none;
+}
+
+.mobile__navbar {
+  display: none;
+}
+
+/* LOGIN DROPDOWN */
+.login-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.login-dropdown .dropdown a {
+  font-size: 16px;
+  color: #7a7a7a;
+  /* color: var(--white); */
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 160px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.dropdown a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background: #f2f2f2;
+}
+
+.close-dropdown {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* LOGIN HEADER (for arrow alignment) */
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* DROPDOWN TOGGLE BUTTON */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.mobile-socials {
+  display: none;
+}
+
+
+
+/* MOBILE VIEW */
+@media (max-width: 1000px) {
+  .nav__container {
+    padding: 1rem 2rem;
+  }
+
+  .mobile-socials {
+    position: relative;
+  display: flex;
+  align-items: center;
+}
+
+  .topbar__container {
+    display: none;
+  }
+
+  /* .mobile__menu {
+  
+    position: relative;
+  } */
+
+  .mobile-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background: #f0f6ff;
+    border-radius: 100%;
+  }
+
+  .active-nav {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .spin__right {
+    transition: all 0.5s ease;
+  }
+  .spin__right:hover {
+    animation: spin 2s ease forwards;
+  }
+
+  .spin__left {
+    transition: all 0.5s ease;
+  }
+
+  .spin__left:hover {
+    animation: spin 2s ease reverse;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: scale(360deg);
+    }
+  }
+
+  .navbar__links li {
+    display: none;
+  }
+
+  .mobile__navbar {
+    display: flex;
+  }
+
+  .mobile__links {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 300px;
+    background-color: #fff;
+    /* box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1) inset;
+    padding: 80px 0 0 20px;
+    transition: 0.4s;
+    z-index: 9999;
+  }
+
+  .mobile__links li {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 9px 0;
+    width: 90%;
+  }
+
+  .mobile__links li a {
+    color: #7a7a7a;
+    font-size: 17px;
+  }
+
+  .mobile__links li:nth-child(6) {
+    border-bottom: none;
+  }
+
+  .show__nav {
+    right: 0;
+  }
+
+  .hide__nav {
+    right: -300px;
+  }
+
+  .mobile-navbar__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #222;
+    font-size: 25px;
+    border: none;
+    background: transparent;
+  }
+
+  .company_name {
+    display: none;
+  }
+
+  .thinktech-logo {
+    /* display: none; */
+  }
+
+  .mobile-logo {
+    width: 65px;
+    height: 65px;
+    display: block;
+  }
+
+
+  /* .dropdown {
+    position: static; 
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 10px;
+  } 
+  */
+
+  .dropdown {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 10px;
+
+    /* 🔥 animation setup */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: 
+      max-height 0.4s ease,
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .mobile_login {
+    color: #7a7a7a;
+    font-size: 17px;
+  }
+
+
+   /* OPEN STATE */
+  .login-dropdown.open .dropdown {
+    max-height: 200px; /* enough to fit items */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* ROTATE WHEN OPEN */
+.dropdown-toggle.open {
+  transform: rotate(180deg);
+}
+
+  .dropdown a {
+    padding: 12px;
+    border-top: 1px solid #eee;
+  }
+
+  .close-dropdown {
+    display: none; /* ❌ remove close icon on mobile */
+  }
+
+}
+
+@media (max-width: 500px) {
+  .react-slideshow-container .default-nav:first-of-type {
+    margin-right: -30px;
+    border-right: 0;
+    border-top: 0;
+}
+}

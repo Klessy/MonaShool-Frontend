@@ -1,0 +1,125 @@
+/* =========================
+   MONA SCHOOL PREMIUM BUTTON
+========================= */
+
+.monaButton {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 18px 34px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  color: #0f172a;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe066,
+      #ffd21a,
+      #ffb703
+    );
+
+  box-shadow:
+    0 10px 30px rgba(255, 210, 26, 0.28),
+    inset 0 1px 1px rgba(255,255,255,0.7);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* SHINE EFFECT */
+.monaButton::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 220%;
+
+  background:
+    rgba(255,255,255,0.28);
+
+  top: -50%;
+  left: -120px;
+
+  transform: rotate(25deg);
+
+  transition: all 0.7s ease;
+}
+
+/* HOVER */
+.monaButton:hover {
+
+  transform: translateY(-4px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd21a,
+      #ffb703,
+      #fb8500
+    );
+
+  box-shadow:
+    0 18px 45px rgba(255, 183, 3, 0.35),
+    0 0 30px rgba(255, 210, 26, 0.18);
+}
+
+/* SHINE MOVEMENT */
+.monaButton:hover::before {
+  left: 120%;
+}
+
+/* CLICK EFFECT */
+.monaButton:active {
+  transform: scale(0.98);
+}
+
+/* OPTIONAL ICON */
+.monaButton svg,
+.monaButton i {
+  transition: transform 0.35s ease;
+}
+
+.monaButton:hover svg,
+.monaButton:hover i {
+  transform: translateX(4px);
+}
+
+.monaOutlineButton {
+  padding: 15px 30px;
+  border-radius: 999px;
+  /* border: 1.5px solid rgba(255,255,255,0.2); */
+  border: 1.5px solid var(--sun-200);
+  background: transparent;
+  /* backdrop-filter: blur(12px); */
+  color: var(--sun-900);
+  font-weight: 700;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.monaOutlineButton:hover {
+  /* background: rgba(255,255,255,0.08); */
+  background: var(--sun-500);
+  transform: translateY(-3px);
+  border: transparent;
+}

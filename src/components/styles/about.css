@@ -1,0 +1,318 @@
+.about__section {
+    /* background: var(--white); */
+    /* background: radial-gradient(circle, rgba(255, 210, 26, 0.15), transparent 70%); */
+    background: linear-gradient(180deg,#fffdf5,#ffffff);
+
+/* background:
+radial-gradient(
+circle at left,
+rgba(255,210,26,0.08),
+transparent 45%
+); */
+
+}
+
+.about__container {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.about__container {
+    display: flex;
+}
+
+.about__content {
+    width: 45%;
+}
+
+.about__content ul {
+  margin-bottom: 2.5rem;
+}
+
+.value__con {
+    margin: 2rem 0 0.5rem 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.value {
+    margin: 0 0 0 15px;
+}
+
+.value h3 {
+    font-size: 1.8rem;
+    margin: 0 0 5px;
+    /* line-height: 32px; */
+    color: var(--mona-dark);
+}
+
+.circle-bg {
+    min-width: 60px;
+    height: 60px;
+    /* background-color: var(--sun-50); */
+    background: var(--mona-offwhite);
+    box-shadow: 0 0 4px rgba(1, 70, 94, 0.2);
+    /* box-shadow: 0 2px 3px rgba(119, 96, 5, 0.2); */
+    /* box-shadow: 0px 2px 3px rgba(255, 127, 15, 0.9); */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.circle-bg i {
+    /* color: var(--sun-orange-500); */
+    color: var(--mona-gray);
+    font-size: 30px;
+}
+
+.about__img {
+    position: relative;
+    width: 50%;
+    /* aspect-ratio: 1 / 1.2; */
+}
+
+.about__img img {
+    /* width: 100%;
+    height: auto; */
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 0.7;
+    object-fit: cover;
+}
+
+/* WRAPPER */
+.floatingCardsWrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+/* MINI CARDS */
+.miniCard {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 22px;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  animation: floatingCard 4s ease-in-out infinite;
+
+  transition: all 0.35s ease;
+}
+
+/* ICON */
+.miniCard span {
+  font-size: 22px;
+}
+
+/* TEXT */
+.miniCard p {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+/* CARD POSITIONS */
+
+/* YELLOW */
+.cardOne {
+  top: 20px;
+  left: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,247,204,0.95),
+      rgba(255,210,26,0.85)
+    );
+}
+
+/* BLUE */
+.cardTwo {
+  top: 120px;
+  right: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(219,234,254,0.95),
+      rgba(96,165,250,0.85)
+    );
+
+  animation-delay: 1s;
+}
+
+/* GREEN */
+.cardThree {
+  bottom: 0;
+  left: 60px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(220,252,231,0.95),
+      rgba(134,239,172,0.85)
+    );
+
+  animation-delay: 2s;
+}
+
+/* FLOATING ANIMATION */
+@keyframes floatingCard {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* OPTIONAL HOVER EFFECT */
+.miniCard:hover {
+  transform: translateY(-6px) scale(1.03);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.12);
+}
+
+@media screen and (max-width: 900px) { 
+
+    .about__img {
+        width: 300px;;
+    }
+
+    .about__img img {
+        width: 100%;
+        object-fit: contain;
+        display: none;
+    }
+
+    .about__content {
+        width: 100%;
+    }
+
+    .about__container {
+        flex-direction: column;
+    }
+
+    .circle-bg {
+    min-width: 50px;
+    height: 50px;
+}
+
+.circle-bg i {
+    /* color: var(--sun-orange-500); */
+    color: var(--mona-gray);
+    font-size: 20px;
+}
+}
+
+/* =========================
+   MOBILE VIEW
+   FLOATING MINI CARDS
+========================= */
+
+@media (max-width: 900px) {
+
+  .floatingCardsWrapper {
+
+    height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+  }
+
+  .miniCard {
+
+    position: relative !important;
+
+    width: 100%;
+    max-width: 320px;
+
+    justify-content: center;
+
+    padding: 14px 18px;
+
+    animation: floatingCardMobile 4s ease-in-out infinite;
+  }
+
+  /* REMOVE ABSOLUTE POSITIONING */
+  .cardOne,
+  .cardTwo,
+  .cardThree {
+
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+  }
+
+  /* KEEP FLOATING DELAYS */
+  .cardTwo {
+    animation-delay: 1s;
+  }
+
+  .cardThree {
+    animation-delay: 2s;
+  }
+
+  /* SMALLER TEXT */
+  .miniCard p {
+
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* SMALLER ICON */
+  .miniCard span {
+    font-size: 20px;
+  }
+
+}
+
+/* MOBILE FLOAT ANIMATION */
+@keyframes floatingCardMobile {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}

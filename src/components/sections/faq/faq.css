@@ -1,0 +1,144 @@
+
+
+.faq__container {
+  /* padding: 10rem 0; */
+}
+
+.faq__wrapper {
+  margin-top: 5rem;
+  /* display: flex;
+  flex-direction: row-reverse; */
+  width: 100%;
+  /* justify-content: space-between;
+  align-items: center; */
+  position: relative;
+}
+
+.faq__img {
+  width: 35%;
+  position: absolute;
+  top: -50px;
+  left: 50px;
+}
+
+.faq__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.faqs__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 4rem;
+  align-items: start;
+  /* max-height: 700px;
+  overflow-y: auto; */
+}
+
+.faq__card.faq:hover {
+  cursor: pointer;
+}
+
+.faq__question-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* gap: 2rem; */
+}
+
+.faq__card-question {
+  font-size: 1.2rem;
+  font-weight: 400;
+  /* background: rgb(24, 59, 231); */
+  background: var(--white);
+  color: var(--dark-blue);
+  padding: 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px 8px 0 0;
+  transition: var(--transition);
+}
+
+.faq-active {
+  font-size: 1.2rem;
+  font-weight: 400;
+  background: rgb(24, 59, 231);
+  color: var(--white);
+  padding: 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px 8px 0 0;
+  transition: var(--transition);
+}
+
+.faq__question {
+  line-height: 1.4;
+  font-size: 1.6rem;
+}
+
+.faq__icon {
+  /* font-size: 1.2rem; */
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.faq__answer {
+  opacity: 0;
+  font-weight: 400;
+  background-color: var(--white);
+  padding: 1rem 1.5rem;
+  /* padding-bottom: 1rem; */
+  border: 2px solid transparent;
+  animation: animateAnswer 500ms ease-in forwards;
+}
+
+@keyframes animateAnswer {
+  to {
+    opacity: 1;
+  }
+}
+
+.faq__card:hover {
+  /* background: transparent; */
+  border-color: var(--white);
+  transform: translateY(-0.5rem);
+}
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 1100px) {
+  .faq__img {
+    display: none;
+  }
+
+  .faqs__content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .faq__card {
+    padding: 1.2rem;
+  }
+
+  .faq__wrapper {
+    flex-direction: column;
+  }
+
+  .faq__img {
+    /* width: 100%;
+    position: relative; */
+    display: none;
+  }
+
+  .faqs__content {
+    width: 100%;
+  }
+  
+  .news__img img {
+    object-fit: cover;
+  }
+}
