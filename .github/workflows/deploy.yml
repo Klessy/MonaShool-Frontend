@@ -14,10 +14,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Next.js Project
         run: npm run build
+
+      - name: Export Static Site
+        run: npm run export
 
       - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
