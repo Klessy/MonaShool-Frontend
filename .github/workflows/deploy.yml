@@ -22,9 +22,9 @@ jobs:
       - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: 82.29.191.149
-          username: u111905644
+          server: ftp.monaschool.ng
+          username: u111905644.MonaSchool
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          server-dir: public_html/
+          server-dir: ./
           dangerous-clean-slate: true
