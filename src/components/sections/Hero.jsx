@@ -65,7 +65,7 @@ const Hero = () => {
                           marginRight: "10px",
                         }}
                       />{" "}
-                      <span className="btn_main-txt">{btn}</span>
+                      <Link href="/contact#contact-form" className="btn_main-txt">{btn}</Link>
                     </Link>
                   </div>
                 </div>

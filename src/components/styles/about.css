@@ -238,6 +238,10 @@ transparent 45%
 
 @media (max-width: 900px) {
 
+  .about__container {
+     padding-bottom: 0;
+  }
+
   .floatingCardsWrapper {
 
     height: 220px;

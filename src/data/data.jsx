@@ -43,7 +43,7 @@ const dataSlider = [
   {
     id: 1,
     title: "Raising Future Leaders  \n",
-    desc: "Learn the in-demand skills required to take you from a beginner \n to an advanced tech developer.",
+    desc: "Building a foundation of Excellence \n for the leaders of tomorrow.",
     img: Carousel_1,
     btn: "JOIN A CLASS",
   },
@@ -65,7 +65,7 @@ const dataSlider = [
   {
     id: 4,
     title: "Learning Through Discovery",
-    desc: "Our Montessori method helps children learn at their own pace \n using hands-on activities and guided support.",
+    desc: "Our Montessori method helps children \n learn at their own pace \n using hands-on activities and guided support.",
     img: Carousel_4,
     btn: "JOIN A CLASS",
   },

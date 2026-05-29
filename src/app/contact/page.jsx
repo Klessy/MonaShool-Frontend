@@ -129,6 +129,7 @@ export default function Page(){
           {/* second col ---*/}
           <form
             className="second-col"
+            id="contact-form"
             ref={formSub}
             // onSubmit={sendEmail}
             noValidate

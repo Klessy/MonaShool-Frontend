@@ -189,6 +189,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -214,6 +215,11 @@ h6 {
 p {
   font-size: 1.4rem;
   color: var(--mona-black);
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  outline: transparent;
 }
 
 .text-center {
