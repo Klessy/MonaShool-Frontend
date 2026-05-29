@@ -118,7 +118,7 @@ transparent 40%
 /* =================== SLIDE BUTTON ====================== */
 .react-slideshow-container .default-nav {
   height: 50px;
-  background: var(--primary);
+  background: var(--sun-500);
   width: 50px;
   border: 0;
   text-align: center;

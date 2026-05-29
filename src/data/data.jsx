@@ -142,20 +142,20 @@ const faqs = [
   },
   {
     id: 2,
-    question: "Requirements",
-    answer: "You will need a laptop and internet access.",
+    question: "How are Food allergies and Medical needs handled?",
+    answer: "During enrollment we record all dietary restrictions and medical action plans",
   },
   {
     id: 3,
-    question: "What Laptop Specification do you recommend?",
+    question: "School approach to discipline",
     answer:
-      "Minimum specifications (OPERATING SYSTEM: Window 8. PROCESSOR: Corei3. RAM: 4GB. HARD DISK: 500GB).",
+      "We focus on teaching emotional regulation, conflict resolution, and redirection rather than punitive measures",
   },
   {
     id: 4,
-    question: "Certificate",
+    question: "How will I be updated on my childs's daily progress",
     answer:
-      "You will receive a certificate after successfully completing a course.",
+      "You can message our staff directly or call the front office. We also hold formal Parent-Teacher Conferences.",
   },
   {
     id: 5,
@@ -167,7 +167,7 @@ const faqs = [
     id: 6,
     question: "How can I apply?",
     answer:
-      "You can apply through our online admission forms.",
+      "You can apply via our front desk office.",
   },
   {
     id: 7,
@@ -177,8 +177,8 @@ const faqs = [
   },
   {
     id: 8,
-    question: "What if a student misses a class",
-    answer: "Class rescheduling is only available for a private student.",
+    question: "What if a Learner misses a class",
+    answer: "We immediately contact the parents and ensure the child's safety and support by sending home missed notes or assignment",
   },
 ];
 
