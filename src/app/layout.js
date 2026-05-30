@@ -7,9 +7,12 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/utils/ScrollToTop";
 
 export const metadata = {
-  title: "Mona School - Excellence in Education",
+  title: "Mona School",
   description:
     "A trusted Montessori Primary School focused on quality education, child development, and a safe learning environment in Sapele. Apply for Admission today.",
+  icons: {
+    icon: "/icon.webp"
+  },
   keywords: [
     "Mona School",
     "Montessori School",

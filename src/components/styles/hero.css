@@ -182,10 +182,14 @@ transparent 40%
   }
 
   .btn_main {
-    padding: 12px 30px 12px 20px;
+    padding: 10px 22px 10px 16px;
     margin: 0 auto;
     text-align: center;
   }
+
+  .btn_main-txt {
+    font-size: 12px;
+}
 
   .react-slideshow-container .default-nav {
     height: 35px;
