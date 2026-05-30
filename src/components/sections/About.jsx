@@ -52,8 +52,8 @@ const About = () => {
                     </li> */}
                     
                 </ul>
-                <Link href="/about">
-                    <button className="monaOutlineButton">Learn More</button>
+                <Link href="/about" className="monaOutlineButton">
+                    Learn More
                 </Link>
             </div>
             <div className="about__img">

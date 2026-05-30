@@ -105,13 +105,14 @@
 }
 
 .monaOutlineButton {
-  padding: 15px 30px;
+  padding: 10px 25px;
   border-radius: 999px;
   /* border: 1.5px solid rgba(255,255,255,0.2); */
-  border: 1.5px solid var(--sun-200);
+  border: 1.5px solid var(--mona-gray);
   background: transparent;
+  font-size: 13px;
   /* backdrop-filter: blur(12px); */
-  color: var(--sun-900);
+  color: var(--mona-gray);
   font-weight: 700;
   transition: all 0.35s ease;
   cursor: pointer;
@@ -119,7 +120,23 @@
 
 .monaOutlineButton:hover {
   /* background: rgba(255,255,255,0.08); */
-  background: var(--sun-500);
-  transform: translateY(-3px);
+  /* background: var(--sun-500); */
+   background:
+    linear-gradient(
+      135deg,
+      #ffe066,
+      #ffd21a,
+      #ffb703
+    );
+  /* transform: translateY(-3px); */
   border: transparent;
+  color: var(--mona-dark);
+  /* font-weight: 600; */
+}
+
+@media screen and (max-width: 900px) {
+  .monaOutlineButton {
+  padding: 8px 20px;
+  font-size: 12px;
+  }
 }
