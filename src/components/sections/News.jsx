@@ -7,13 +7,14 @@ import FirstEvent from "@/assets/images/E1.jpeg";
 
 import "@/components/styles/news.css";
 import Link from "next/link";
+import Subtitle from "../utils/Subtitle";
 
 const News = () => {
   return (
     <section className="news__section">
         <div className="news__container container">
             <div className="text-center">
-              <span className="pre-title">Events</span>
+              <Subtitle cName={"why__subtitle"} text={"events"}/>
               <h2 className="heading__subtitle">Latest from Mona School</h2>
             </div>
 

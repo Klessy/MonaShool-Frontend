@@ -4,6 +4,8 @@
 import { useState, useRef } from "react";
 import "./accordion.css"
 import { faqs } from "@/data/data";
+import Subtitle from "@/components/utils/Subtitle";
+import WhatsAppButton from "@/components/utils/WhatsAppButton";
 
 const faqData = [
   {
@@ -34,7 +36,7 @@ export default function Accordion() {
     <section className="faq__section">
       <div className="container faq__container">
         <div className="faq__title text-center">
-          <span className="pre-title">FAQ</span>
+          <Subtitle cName={"about__subtitle"} text={"FAQs"}/>
           <h2>Frequently Asked Questions</h2>
         </div>
 
@@ -48,6 +50,7 @@ export default function Accordion() {
             />
           ))}
         </div>
+        <WhatsAppButton />
       </div>
     </section>
   );

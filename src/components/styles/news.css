@@ -26,12 +26,87 @@ linear-gradient(
     overflow: hidden;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 
+    background: linear-gradient( 
+        135deg, 
+        #dcfce7, 
+        #22c55e, 
+        #15803d 
+        );
+    transition: all 300ms ease;
+}
+
+.news__btn {
+    font-weight: 600;
+    padding: 10px;
+    /* background: #60a5fa; */
+    background:  #15803d;
+    text-transform: uppercase;
+    color: var(--mona-offwhite);
+    /* box-shadow: 0 10px 0px rgba(96, 165, 250, 0.9); */
+    /* box-shadow: 0 2px 2px rgba(37, 99, 235, 0.3); */
+     box-shadow: 0 2px 2px rgba(22, 163, 74, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.news__card:hover {
+    background: linear-gradient( 
+        135deg, 
+        #dcfce7, 
+        #0e7734, 
+        #023d18 
+        );
+}
+
+.news__btn:hover {
+    box-shadow: 0 2px 2px rgba(4, 105, 41, 0.3);
+}
+
+.news__card:nth-child(2) {
        background: linear-gradient(
         135deg,
         #dbeafe,
         #60a5fa,
         #2563eb
     );
+}
+
+.news__card:nth-child(2):hover {
+     background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #1e78e6,
+        #073391
+    );
+}
+
+.news__card:nth-child(2) .news__btn {
+    background: #60a5fa;
+    box-shadow: 0 2px 2px rgba(37, 99, 235, 0.3);
+}
+
+.news__card:nth-child(3) {
+       background: linear-gradient(
+        135deg,
+        var(--sun-400),
+        var(--sun-600),
+        var(--sun-800)
+    );
+}
+
+.news__card:nth-child(3):hover {
+     background: linear-gradient(
+        135deg,
+        var(--sun-500),
+        var(--sun-700),
+        var(--sun-900)
+    );
+}
+
+.news__card:nth-child(3) .news__btn {
+    background: var(--sun-600);
+    box-shadow: 0 2px 2px var(--sun-700);
 }
 
 
@@ -102,17 +177,9 @@ linear-gradient(
      margin: 1.2rem 0 1.2rem 0;
 }
 
-.news__btn {
-    font-weight: 600;
-    padding: 10px;
-    background: #60a5fa;
-    text-transform: uppercase;
-    color: var(--mona-offwhite);
-    /* box-shadow: 0 10px 0px rgba(96, 165, 250, 0.9); */
-    box-shadow: 0 2px 2px rgba(37, 99, 235, 0.3);
-    border-radius: 5px;
-    cursor: pointer;
-}
+
+
+
 
 
 .news_card-1 {
