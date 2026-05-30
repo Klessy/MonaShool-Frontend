@@ -228,6 +228,14 @@ nav {
     border-radius: 100%;
   }
 
+   .mobile-item:hover {
+    background: var(--sun-600);
+   }
+
+   .mobile-item .fas:hover {
+    color: var(--white);
+   }
+
   .active-nav {
     padding: 1rem;
     width: 100%;
@@ -238,6 +246,7 @@ nav {
   }
   .spin__right:hover {
     animation: spin 2s ease forwards;
+    color: var(--white);
   }
 
   .spin__left {

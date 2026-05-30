@@ -1,18 +1,5 @@
 
 "use client";
-// import { motion } from "framer-motion";
-
-// export default function Hero(){
-//   return (
-//     <section className="h-screen bg-primary text-white flex items-center justify-center text-center">
-//       <motion.div initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:0.8}}>
-//         <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Mona School</h1>
-//         <p className="mb-6">Raising Future Leaders</p>
-//         <button className="bg-accent text-black px-6 py-3 rounded">Enroll Now</button>
-//       </motion.div>
-//     </section>
-//   )
-// }
 
 
 
@@ -57,7 +44,7 @@ const Hero = () => {
                     >
                       {desc}
                     </p>
-                    <Link className="btn_main" href="/enroll">
+                    <Link className="btn_main btn_main-txt" href="/contact#contact-form">
                       <FaCirclePlus
                         style={{
                           color: "#fff1a8",
@@ -65,7 +52,8 @@ const Hero = () => {
                           marginRight: "10px",
                         }}
                       />{" "}
-                      <Link href="/contact#contact-form" className="btn_main-txt">{btn}</Link>
+                      {btn}
+                      {/* <Link href="" className="btn_main-txt">{btn}</Link> */}
                     </Link>
                   </div>
                 </div>

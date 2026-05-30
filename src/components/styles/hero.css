@@ -28,7 +28,7 @@
 .hero-p {
   /* color: #f5b016; */
   color: var(--sun-700);
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 1.8rem;
   font-weight: 900;
   font-style: italic;

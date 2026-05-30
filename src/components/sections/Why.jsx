@@ -16,13 +16,14 @@ import WhyBg_2 from "@/assets/bg/shape-7.png";
 
 
 import "../styles/why.css";
+import Subtitle from "../utils/Subtitle";
 
 const Why = () => {
   return (
     <section className="why__section">
       <div className="why__container container">
         <div className="text-center">
-          <span className="pre-title">Why us</span>
+          <Subtitle cName={"why__subtitle"} text={"why us"} />
           <h2 className="heading__subtitle">Why Parents Choose Our School</h2>
         </div>
         <p>We are committed to helping every child succeed academically, socially, and emotionally in a safe and caring environment.</p>

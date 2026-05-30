@@ -8,6 +8,21 @@
  padding: 10rem 0;
 }
 
+.why__subtitle {
+   font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  /* color: var(--mona-gray); */
+  background: var(--mona-offwhite);
+  padding: 0.2rem 0.9rem;
+  border-radius: 10px;
+  color: var(--sun-500);
+  background-color: var(--sun-50);
+  box-shadow: 0px 2px 3px rgba(255, 238, 5, 0.932);
+}
+
 .why__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

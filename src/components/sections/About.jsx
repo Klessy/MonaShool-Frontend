@@ -12,6 +12,7 @@ import "@/components/styles/button.css";
 import Image from "next/image";
 import Link from "next/link";
 import AboutImg from "@/assets/images/monaschool-sapele.jpg";
+import Subtitle from "../utils/Subtitle";
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
         <div className="about__container container">
             <div className="about__content">
                 <div className="">
-                    <span className="pre-title">About Us</span>
+                    <Subtitle cName={"about__subtitle"} text={"About us"}/>
                     <h2 className="heading__subtitle">About Our Montessori Primary School</h2>
                 </div>
                 <p>

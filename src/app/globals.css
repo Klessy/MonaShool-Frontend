@@ -451,27 +451,6 @@ a {
   justify-content: center;
 }
 
-.pre-title {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  line-height: 26px;
-  letter-spacing: 0.1em;
-  color: var(--mona-gray);
-  background: var(--mona-offwhite);
-  box-shadow: 0 0 2px rgba(1, 70, 94, 0.2);
-
-  /* color: var(--sun-orange-500);
-  background-color: var(--sun-50);
-  box-shadow: 0px 2px 3px rgba(255, 127, 15, 0.2); */
-
-  /* background: rgba(255, 255, 205, 1);
-  color: rgba(0, 50, 100);
-  box-shadow: 0 2px 3px rgba(119, 96, 5, 0.2); */
-  padding: 0.2rem 0.9rem;
-  border-radius: 10px;
-}
-
 .btn_main {
   display: flex;
   align-items: center;
