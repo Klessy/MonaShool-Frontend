@@ -7,6 +7,16 @@ import EventsImg from "../assets/images/monaschool-outdoor-study-pry5.webp";
 import EventsImg_1 from "../assets/images/mona-school-national-day-event.webp";
 import EventsImg_2 from "../assets/images/monaschool-playing-instrument.webp";
 import EventsImg_4 from "../assets/images/monaschool-outdoor-study-pry5.webp";
+import ActivitySlide_1 from "../assets/images/monaschool-parade.webp";
+import ActivitySlide_2 from "../assets/images/monaschool-classroom-exercise-sapele.webp";
+import ActivitySlide_3 from "../assets/images/monaschool-orodje.webp";
+import ActivitySlide_4 from "../assets/images/monaschool-football-game.webp";
+import ActivitySlide_5 from "../assets/images/monaschool-tennis-game.webp";
+import ActivitySlide_6 from "../assets/images/monaschool-parents-race.webp";
+import ActivitySlide_7 from "../assets/images/monaschool-parade-blue-house.webp";
+import ActivitySlide_8 from "../assets/images/monaschool-parade-red-house.webp";
+import ActivitySlide_9 from "../assets/images/monaschool-classroom-activity-KG.webp";
+import ActivitySlide_10 from "../assets/images/monaschool-classroom-activity.webp";
 
 
 
@@ -137,7 +147,7 @@ const latestUpDate = [
 const faqs = [
   {
     id: 1,
-    question: "What age do you accept children",
+    question: "What age do you accept children?",
     answer: "We accept children from age 2 to 11.",
   },
   {
@@ -147,19 +157,19 @@ const faqs = [
   },
   {
     id: 3,
-    question: "School approach to discipline",
+    question: "School approach to discipline?",
     answer:
       "We focus on teaching emotional regulation, conflict resolution, and redirection rather than punitive measures",
   },
   {
     id: 4,
-    question: "How will I be updated on my childs's daily progress",
+    question: "How will I be updated on my childs's daily progress?",
     answer:
       "You can message our staff directly or call the front office. We also hold formal Parent-Teacher Conferences.",
   },
   {
     id: 5,
-    question: "Do you follow Montessori curriculum",
+    question: "Do you apply the Montessori method?",
     answer:
       "Yes, we use a Montessori-based learning approach.",
   },
@@ -177,9 +187,85 @@ const faqs = [
   },
   {
     id: 8,
-    question: "What if a Learner misses a class",
+    question: "What if a Learner misses a class?",
     answer: "We immediately contact the parents and ensure the child's safety and support by sending home missed notes or assignment",
   },
 ];
 
-export { dataSlider, latestUpDate, faqs };
+const activitySlide = [
+  {
+    section: "Inter-House Sports 🏆",
+    subtitle: "Celebrating teamwork, unity and house spirit",
+    showSection: true,
+    src: ActivitySlide_1,
+    caption: "Green house Parade.",
+  },
+
+  {
+    section: "Inter-House Sports 🏆",
+    src: ActivitySlide_7,
+    caption: "Showcasing Blue House Teamwork.",
+  },
+
+  {
+    section: "Inter-House Sports 🏆",
+    src: ActivitySlide_8,
+    caption: "Showcasing Red House Teamwork.",
+  },
+
+  {
+    section: "Inter-House Sports 🏆",
+    src: ActivitySlide_6,
+    caption: "Parents race.",
+  },
+
+  {
+    section: "Classroom Activity 📚",
+    subtitle: "Learning through guided tasks",
+    showSection: true,
+    src: ActivitySlide_2,
+    caption: "Pupils engaged in hands-on learning.",
+  },
+
+  {
+    section: "Classroom Activity 📚",
+    src: ActivitySlide_9,
+    caption: "Pupil exploring and creating.",
+  },
+
+  {
+    section: "Classroom Activity 📚",
+    src: ActivitySlide_10,
+    caption: "Learning through guided tasks.",
+  },
+
+  {
+    section: "Cultural Excursion 👑",
+    subtitle: "Visit to the Orodje of Sapele",
+    showSection: true,
+    src: ActivitySlide_3,
+    caption: "Children Learning through cultural exploration.",
+  },
+
+  {
+    section: "Sports & Recreation ⚽",
+    subtitle: "Building teamwork and confidence",
+    showSection: true,
+    src: ActivitySlide_4,
+    caption: "Annual sports competition.",
+  },
+
+  {
+    section: "Sports & Recreation ⚽",
+    src: ActivitySlide_5,
+    caption: "Outdoor games and teamwork.",
+  },
+
+  {
+    section: "Sports & Recreation ⚽",
+    src: ActivitySlide_6,
+    caption: "Parents race.",
+  },
+];
+
+export { dataSlider, latestUpDate, faqs, activitySlide };

@@ -1,39 +1,42 @@
 "use client";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
 import { activitySlide } from "@/data/data";
 import "../styles/program.css";
-import Subtitle from "../utils/Subtitle";
 
 const Programs = () => {
-  // ✅ IMPORTANT: create plugin ONCE
-  const autoplay = Autoplay({
-    delay: 3500,
-    stopOnInteraction: false,
-    stopOnMouseEnter: true,
-  });
+  // ✅ stable autoplay instance (IMPORTANT)
+  const autoplay = useRef(
+    Autoplay({
+      delay: 3200,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    })
+  );
 
-  // ✅ Embla setup (THIS is the correct way)
+  // ✅ embla setup
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
       align: "center",
       dragFree: false,
+      containScroll: "trimSnaps",
     },
-    [autoplay] // 👈 MUST be here
+    [autoplay.current]
   );
 
+  // UI state
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // -----------------------
-  // TRACK ACTIVE SLIDE
-  // -----------------------
+  // ---------------------------
+  // SLIDE TRACKING
+  // ---------------------------
   useEffect(() => {
     if (!emblaApi) return;
 
@@ -43,12 +46,15 @@ const Programs = () => {
 
     const onScroll = () => {
       const progress = emblaApi.scrollProgress();
-      setScrollProgress(Math.min(1, Math.max(0, progress)) * 100);
+      setScrollProgress(
+        Math.max(0, Math.min(1, progress)) * 100
+      );
     };
 
     emblaApi.on("select", onSelect);
     emblaApi.on("scroll", onScroll);
 
+    // init
     onSelect();
     onScroll();
 
@@ -58,45 +64,77 @@ const Programs = () => {
     };
   }, [emblaApi]);
 
-  // -----------------------
-  // NAV BUTTONS
-  // -----------------------
+  // ---------------------------
+  // AUTOPLAY SAFETY START
+  // ---------------------------
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const plugin = autoplay.current;
+
+    const start = () => {
+      plugin?.play?.();
+    };
+
+    start();
+
+    emblaApi.on("reInit", start);
+
+    return () => {
+      plugin?.stop?.();
+    };
+  }, [emblaApi]);
+
+  // ---------------------------
+  // NAVIGATION
+  // ---------------------------
   const scrollPrev = useCallback(() => {
-    emblaApi?.scrollPrev();
+    if (!emblaApi) return;
+    emblaApi.scrollPrev();
   }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
-    emblaApi?.scrollNext();
+    if (!emblaApi) return;
+    emblaApi.scrollNext();
   }, [emblaApi]);
 
+  // ---------------------------
+  // RENDER
+  // ---------------------------
   return (
     <section className="program__section">
       <div className="program__container container">
-       
+
         {/* HEADER */}
         <div className="program__header">
-          {/* <span className="program__tag">MONA SCHOOL</span> */}
-          <Subtitle cName={"why__subtitle"} text={"MONA SCHOOL"} />
-          <h2 className="heading__subtitle">Discover Life At Mona School</h2>
+          <span className="program__tag">
+            MONA SCHOOL
+          </span>
+
+          <h2>
+            Discover Life At Mona School
+          </h2>
+
           <p>
-            A visual journey through learning, creativity, innovation and memorable experiences.
+            A visual journey through learning,
+            creativity, innovation and memorable experiences.
           </p>
         </div>
 
-        {/* <div className="carouselSpotlight"></div> */}
-
-        {/* CAROUSEL */}
+        {/* EMBLA */}
         <div className="embla" ref={emblaRef}>
-          {/* <div className="embla__viewport"> */}
+          <div className="embla__viewport">
             <div className="embla__container">
 
               {activitySlide.map((slide, index) => (
                 <div className="embla__slide" key={index}>
+
                   <div
                     className={`slide-card ${
                       selectedIndex === index ? "is-active" : ""
                     }`}
                   >
+                    {/* IMAGE */}
                     <div className="image-wrapper">
                       <Image
                         src={slide.src}
@@ -107,6 +145,7 @@ const Programs = () => {
                       />
                     </div>
 
+                    {/* OPTIONAL TITLE OVERLAY */}
                     {slide.showSection && (
                       <div className="section-overlay">
                         <span>MONA SCHOOL</span>
@@ -115,29 +154,42 @@ const Programs = () => {
                       </div>
                     )}
 
+                    {/* CAPTION */}
                     {slide.caption && (
-                      <div className="caption">{slide.caption}</div>
+                      <div className="caption">
+                        {slide.caption}
+                      </div>
                     )}
                   </div>
+
                 </div>
               ))}
 
             </div>
-          {/* </div> */}
+          </div>
 
-          {/* NAV */}
+          {/* NAV BUTTONS */}
           <div className="carousel-nav">
-            <button className="carousel-btn prev-btn" onClick={scrollPrev}>
+            <button
+              className="carousel-btn prev-btn"
+              onClick={scrollPrev}
+              aria-label="Previous Slide"
+            >
               <FiChevronLeft />
             </button>
 
-            <button className="carousel-btn next-btn" onClick={scrollNext}>
+            <button
+              className="carousel-btn next-btn"
+              onClick={scrollNext}
+              aria-label="Next Slide"
+            >
               <FiChevronRight />
             </button>
           </div>
+
         </div>
 
-        {/* PROGRESS */}
+        {/* PROGRESS BAR */}
         <div className="progress-track">
           <div
             className="progress-fill"

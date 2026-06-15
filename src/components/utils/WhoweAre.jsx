@@ -1,5 +1,8 @@
 
+import Image from "next/image";
+import AboutImg from "@/assets/images/monascool-CEO.webp";
 import "../styles/whoweare.css";
+
 
 const WhoWeAre = () => {
   return (
@@ -23,7 +26,7 @@ const WhoWeAre = () => {
           </div>
         </div>
         <div className="who__about__img">
-          
+          <Image src={AboutImg} />
         </div>
       </div>
     </section>

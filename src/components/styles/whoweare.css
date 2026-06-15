@@ -166,16 +166,23 @@
 @media screen and (max-width: 900px) {
   .whyus__container {
     padding: 3rem 0;
+    gap: 1rem;
   }
 
   .whyus__bg-img {
     display: none;
   }
+
   .whyus__wrapper {
     grid-template-columns: 1fr;
   }
 
   .who__we__are-p p {
     font-size: 1.6rem;
+  }
+
+  .who__about__img {
+    margin-inline: auto;
+    width: 100%;
   }
 }

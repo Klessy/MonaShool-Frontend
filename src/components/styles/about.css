@@ -111,6 +111,15 @@ transparent 45%
     object-fit: cover;
 }
 
+.school__img {
+  position: absolute;
+  width: 50%;
+}
+
+.school__img img {
+  width: 100%;
+}
+
 /* WRAPPER */
 .floatingCardsWrapper {
   position: relative;

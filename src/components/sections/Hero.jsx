@@ -44,7 +44,7 @@ const Hero = () => {
                     >
                       {desc}
                     </p>
-                    <Link className="btn_main btn_main-txt" href="/contact#contact-form">
+                    {/* <Link className="btn_main btn_main-txt" href="/contact#contact-form">
                       <FaCirclePlus
                         style={{
                           color: "#fff1a8",
@@ -53,8 +53,8 @@ const Hero = () => {
                         }}
                       />{" "}
                       {btn}
-                      {/* <Link href="" className="btn_main-txt">{btn}</Link> */}
-                    </Link>
+                    
+                    </Link> */}
                   </div>
                 </div>
               </div>

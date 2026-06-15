@@ -15,6 +15,7 @@ export const metadata = {
   },
   keywords: [
     "Mona School",
+    "Mona School Sapele",
     "Montessori School",
     "School Admission",
     "Primary School",

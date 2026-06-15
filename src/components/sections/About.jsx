@@ -12,6 +12,7 @@ import "@/components/styles/button.css";
 import Image from "next/image";
 import Link from "next/link";
 import AboutImg from "@/assets/images/monaschool-sapele.jpg";
+import SchImg from "../../assets/images/monaschool-tour.webp";
 import Subtitle from "../utils/Subtitle";
 
 const About = () => {
@@ -56,15 +57,19 @@ const About = () => {
                     Learn More
                 </Link>
             </div>
-            <div className="about__img">
-                <Image src={AboutImg} alt="About Mona scool Sapele" />
-                
-            </div>
+            {/* <div className="about__imgs"> */}
+                <div className="about__img">
+                    <Image src={AboutImg} alt="About Mona scool Sapele" />
+                </div>
+                {/* <div className="school__img">
+                    <Image className="school__img" src={SchImg} alt="Mona School Tour" />
+                </div> */}
+            {/* </div> */}
         </div>
            <div class="floatingCardsWrapper">
                     <div class="miniCard cardOne">
                         <span>⭐</span>
-                        <p>10+ Years of Excellence</p>
+                        <p>20+ Years of Excellence</p>
                     </div>
 
                     <div class="miniCard cardTwo">
