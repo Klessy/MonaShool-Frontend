@@ -81,9 +81,6 @@
     filter: blur(70px);
   }
 
-  .program__container {
-    padding: 5rem 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -105,10 +102,6 @@
     left: -80px;
 
     filter: blur(50px);
-  }
-
-  .program__container {
-    padding: 4rem 0;
   }
 }
 
@@ -261,12 +254,14 @@
 
 .prev-btn {
   /* left: 2rem; */
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
+  margin-left: 0.2rem;
 }
 
 .next-btn {
   /* right: 2rem; */
-  margin-right: 1.5rem;
+  /* margin-right: 1.5rem; */
+  margin-right: 0.2rem;
 }
 
 /* PROGRESS BAR */
