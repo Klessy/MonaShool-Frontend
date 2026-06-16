@@ -80,6 +80,10 @@
     background: rgba(251, 146, 60, 0.06);
     filter: blur(70px);
   }
+
+  .program__container {
+    padding: 5rem 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -101,6 +105,10 @@
     left: -80px;
 
     filter: blur(50px);
+  }
+
+  .program__container {
+    padding: 4rem 0;
   }
 }
 
@@ -511,7 +519,8 @@
 @media (max-width: 768px) {
 
   .embla__slide {
-    flex: 0 0 92%;
+    /* flex: 0 0 92%; */
+    flex: 0 0 100%;
   }
 
   .slide-card {

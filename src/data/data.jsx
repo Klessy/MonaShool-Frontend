@@ -195,7 +195,7 @@ const faqs = [
 const activitySlide = [
   {
     section: "Inter-House Sports 🏆",
-    subtitle: "Celebrating teamwork, unity and house spirit",
+    subtitle: "Celebrating teamwork and house spirit",
     showSection: true,
     src: ActivitySlide_1,
     caption: "Green house Parade.",
