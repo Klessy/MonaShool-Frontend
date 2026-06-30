@@ -1,0 +1,498 @@
+.graduation{
+    padding: 10px 0;
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fffcf5 50%,
+        #fff9ed 100%
+    );
+
+    overflow:hidden;
+    position:relative;
+}
+
+.graduation::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    right:-180px;
+    top:-120px;
+    border-radius:50%;
+    background:
+
+    radial-gradient(
+        rgba(255,210,26,.12),
+        transparent 70%s
+    );
+}
+
+.graduation::after{
+    content:"";
+    position:absolute;
+    width:380px;
+    height:380px;
+    left:-160px;
+    bottom:-140px;
+    border-radius:50%;
+    background:
+
+    radial-gradient(
+        rgba(60,150,255,.07),
+        transparent 70%
+    );
+}
+
+.graduation__container{
+    /* width:min(1200px,92%); */
+    margin:auto;
+    position:relative;
+    z-index:5;
+}
+
+.graduationBadge{
+    font-size: 1.2rem;
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    padding:12px 26px;
+    border-radius:999px;
+    background:#FFF8E3;
+    color:var(--sun-700);
+    font-weight:700;
+    margin-top: 40px;
+    margin-bottom:20px;
+}
+
+.graduationBtn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.8rem;
+    padding:16px 34px;
+    border:none;
+    border-radius:999px;
+    cursor:pointer;
+    overflow:hidden;
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:.5px;
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        var(--sun-500),
+        var(--sun-600),
+        var(--sun-800)
+    );
+
+    box-shadow:
+        0 15px 35px rgba(217,119,6,.28),
+        0 8px 18px rgba(251,191,36,.18);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        filter .35s ease;
+}
+
+.graduationBtn::before{
+    content:"";
+    position:absolute;
+    top:-40%;
+    left:-120%;
+    width:60%;
+    height:220%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.55),
+        transparent
+    );
+
+    transform:rotate(20deg);
+    transition:left .8s ease;
+}
+
+.graduationBtn::after{
+    content:"";
+    position:absolute;
+    inset:2px;
+    border-radius:inherit;
+    background:linear-gradient(
+        rgba(255,255,255,.18),
+        rgba(255,255,255,0)
+
+    );
+    pointer-events:none;
+}
+
+.graduationBtn:hover{
+    transform:translateY(-5px);
+    filter:brightness(1.05);
+    box-shadow:
+        0 22px 45px rgba(217,119,6,.35),
+        0 10px 24px rgba(255,193,7,.28);
+}
+
+.graduationBtn:hover::before{
+    left:160%;
+}
+
+.graduationBtn:active{
+    transform:translateY(-1px) scale(.98);
+}
+
+.graduationBtn span{
+    position:relative;
+    z-index:2;
+}
+
+.btnIcon{
+
+    font-size:1.1rem;
+
+    transition:.35s;
+
+}
+
+.btnArrow{
+    font-size:1.2rem;
+    transition:.35s;
+}
+
+.graduationBtn:hover .btnArrow{
+    transform:translateX(8px);
+}
+
+.graduationBtn:hover .btnIcon{
+    transform:rotate(-12deg) scale(1.15);
+
+}
+
+@media (max-width:768px){
+
+    .graduationBtn{
+        width:100%;
+        padding:15px 22px;
+        font-size:.95rem;
+    }
+}
+
+.graduation__header h2{
+    /* font-size:clamp(2rem,5vw,3.2rem); */
+    font-size: 2.5rem;
+    color:var(--mona-black);
+    margin-bottom:18px;
+}
+
+.graduationBtn:focus-visible{
+    outline:none;
+    box-shadow:
+        0 0 0 5px rgba(255,193,7,.22),
+        0 20px 40px rgba(217,119,6,.3);
+}
+
+.graduation__header p{
+    width:min(700px,100%);
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+.graduationTimeline{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    position:relative;
+    margin-bottom:70px;
+}
+
+.graduationTimeline::before{
+    content:"";
+    position:absolute;
+    left:7%;
+    right:7%;
+    top:16px;
+    height:4px;
+    border-radius:50px;
+    background:#E9E9E9;
+}
+
+/* .graduationTimeline::after{
+    content:"";
+    position:absolute;
+    left:7%;
+    top:16px;
+
+    height:4px;
+    border-radius:50px;
+    background:
+    linear-gradient(
+        90deg,
+        var(--sun-500),
+        var(--sun-700)
+    );
+    width:0;
+    transition:.6s;
+} */
+
+.graduationTimeline::after{
+    content:"";
+    position:absolute;
+    left:7%;
+    top:16px;
+    height:4px;
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--sun-500),
+        var(--sun-700)
+    );
+
+    width:var(--timeline-progress,0%);
+    transition:
+        width .65s cubic-bezier(.22,1,.36,1);
+
+}
+
+.timelineItem{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    cursor:pointer;
+    position:relative;
+    z-index:10;
+}
+
+.timelineDot{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:white;
+    border:4px solid #d8d8d8;
+    display:grid;
+    place-items:center;
+    transition:.4s;
+}
+
+.timelineDot span{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#cfcfcf;
+    transition:.4s;
+}
+
+.activeDot{
+    position: relative;
+    border-color: var(--sun-600);
+    transform: scale(1.2);
+    box-shadow:
+        0 0 0 8px rgba(255,193,7,.18);
+}
+
+.activeDot::after{
+    content:"";
+    position:absolute;
+    inset:-8px;
+    border-radius:50%;
+    border:2px solid rgba(255,193,7,.45);
+    animation:timelinePulse 2s infinite;
+
+}
+
+.activeDot span{
+    background:var(--sun-700);
+    transform:scale(1.4);
+}
+
+.timelineItem:hover .timelineDot{
+    transform:translateY(-5px);
+}
+
+.timelineYear{
+    margin-top:18px;
+    font-weight:700;
+    color:#777;
+    transition:.35s;
+}
+
+.activeTimelineYear{
+    color:var(--sun-700);
+    transform:translateY(5px);
+}
+
+.graduationPhotoCard{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:45px;
+    background:white;
+    border-radius:35px;
+    overflow:hidden;
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.08);
+}
+
+.graduationImage{
+    width:100%;
+    height:100%;
+    min-height:520px;
+    object-fit:cover;
+    transition:.8s;
+    cursor:pointer;
+}
+
+.graduationImage:hover{
+    transform:scale(1.05);
+}
+
+.graduationContent{
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.graduationSession{
+    display:inline-flex;
+    align-self:flex-start;
+    background:#FFF8E6;
+    color:var(--sun-700);
+    padding:10px 20px;
+    border-radius:50px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.graduationContent h3{
+    font-size:2rem;
+    color:var(--mona-black);
+    margin-bottom:15px;
+
+}
+
+.graduationCount{
+
+    color:#444;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.graduationContent blockquote{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-style:italic;
+
+    margin-bottom:35px;
+
+}
+
+.graduationBtn{
+    align-self:flex-start;
+}
+
+.fadeOut{
+    opacity:0;
+    transform:translateY(20px);
+
+}
+
+.fadeIn{
+    opacity:1;
+    transform:translateY(0);
+    transition:
+    opacity .4s,
+    transform .4s;
+}
+
+@keyframes timelinePulse{
+    0%{
+        transform:scale(1);
+        opacity:.7;
+    }
+
+    70%{
+        transform:scale(1.6);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1.6);
+        opacity:0;
+    }
+
+}
+
+@media(max-width:992px){
+.graduationPhotoCard{
+    grid-template-columns:1fr;
+    }
+
+    .graduationImage{
+    min-height:420px;
+    }
+}
+
+@media(max-width:768px){
+    .graduation{
+        padding:80px 0;
+    }
+
+    .graduationTimeline{
+        overflow-x:auto;
+        justify-content:flex-start;
+        gap:50px;
+        padding-bottom:15px;
+    }
+
+    .graduationTimeline::-webkit-scrollbar{
+        display:none;
+    }
+
+    .graduationContent{
+        padding:30px;
+    }
+
+    .graduationImage{
+        min-height:300px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .timelineDot{
+        width:28px;
+        height:28px;
+    }
+
+    .timelineDot span{
+        width:8px;
+        height:8px;
+    }
+
+    .timelineYear{
+        font-size:.9rem;
+    }
+
+    .graduationContent h3{
+        font-size:1.5rem;
+    }
+
+    .graduationImage{
+        min-height:240px;
+    }
+
+}

@@ -1,8 +1,18 @@
+//React Icons
+import {
+  FaGraduationCap,
+  FaChalkboardTeacher,
+  FaSmile,
+  FaAward,
+} from "react-icons/fa";
+
 //Hero Images
 import Carousel_1 from "../assets/images/monaschool-graduants-activity.webp";
 import Carousel_2 from "../assets/images/monaschool-sport-activity.webp";
 import Carousel_3 from "../assets/images/monaschool-puzzle-activitiy-sapele.webp";
 import Carousel_4 from "../assets/images/monaschool-classroom-exercise-sapele.webp";
+import Carousel_5 from "../assets/images/monaschool-view.webp";
+
 import EventsImg from "../assets/images/monaschool-outdoor-study-pry5.webp";
 import EventsImg_1 from "../assets/images/mona-school-national-day-event.webp";
 import EventsImg_2 from "../assets/images/monaschool-playing-instrument.webp";
@@ -17,7 +27,25 @@ import ActivitySlide_7 from "../assets/images/monaschool-parade-blue-house.webp"
 import ActivitySlide_8 from "../assets/images/monaschool-parade-red-house.webp";
 import ActivitySlide_9 from "../assets/images/monaschool-classroom-activity-KG.webp";
 import ActivitySlide_10 from "../assets/images/monaschool-classroom-activity.webp";
+import ActivitySlide_11 from "../assets/images/monaschool-classactivity-3.webp";
+import ActivitySlide_12 from "../assets/images/monaschool-learns-recreation.webp";
+import ActivitySlide_13 from "../assets/images/monaschool-sport-salute.webp";
+import ActivitySlide_14 from "../assets/images/monaschool-farm-3.webp";
+import ActivitySlide_15 from "../assets/images/monaschool-farm-2.webp";
+import ActivitySlide_16 from "../assets/images/monaschool-farm-1.webp";
 
+// Staff and PTA
+import TeachingStaff_1 from "../assets/images/Teaching-staff-2023-24.webp";
+import TeachingStaff_2 from "../assets/images/monaschool-Teaching-Staff.webp";
+import TeachingStaff_3 from "../assets/images/monaschool-old-staff.webp";
+import TeachingStaff_4 from "../assets/images/monaschool-Admin.webp";
+import TeachingStaff_5 from "../assets/images/monaschool-staff.webp";
+import TeachingStaff_6 from "../assets/images/monaschool-class-teachers.jpg";
+
+//Graduates Picture
+import Graduation_1 from "../assets/images/monaschool-class-2025.webp";
+import Graduation_2 from "../assets/images/monaschool-class-23.webp";
+import Graduation_3 from "../assets/images/monaschool-class18.webp";
 
 
 export const navLink = [
@@ -77,6 +105,14 @@ const dataSlider = [
     title: "Learning Through Discovery",
     desc: "Our Montessori method helps children \n learn at their own pace \n using hands-on activities and guided support.",
     img: Carousel_4,
+    btn: "JOIN A CLASS",
+  },
+
+  {
+    id: 5,
+    title: "Happy Environment",
+    desc: "Save Environment",
+    img: Carousel_5,
     btn: "JOIN A CLASS",
   },
 ];
@@ -192,6 +228,37 @@ const faqs = [
   },
 ];
 
+const stats = [
+  {
+    id: 1,
+    icon: <FaGraduationCap />,
+    number: "10+",
+    title: "Years of Excellence",
+    description: "Providing quality education and nurturing young minds."
+  },
+  {
+    id: 2,
+    icon: <FaChalkboardTeacher />,
+    number: "Qualified",
+    title: "Teaching Staff",
+    description: "Dedicated educators committed to every child's success."
+  },
+  {
+    id: 3,
+    icon: <FaSmile />,
+    number: "Safe",
+    title: "Learning Environment",
+    description: "A caring atmosphere where pupils feel valued and confident."
+  },
+  {
+    id: 4,
+    icon: <FaAward />,
+    number: "Holistic",
+    title: "Child Development",
+    description: "Academic, social and emotional growth through Montessori learning."
+  }
+]
+
 const activitySlide = [
   {
     section: "Inter-House Sports 🏆",
@@ -220,6 +287,12 @@ const activitySlide = [
   },
 
   {
+    section: "Inter-House Sports 🏆",
+    src: ActivitySlide_13,
+    caption: "Salutation",
+  },
+
+  {
     section: "Classroom Activity 📚",
     subtitle: "Learning through guided tasks",
     showSection: true,
@@ -236,6 +309,12 @@ const activitySlide = [
   {
     section: "Classroom Activity 📚",
     src: ActivitySlide_10,
+    caption: "Learning through guided tasks.",
+  },
+
+  {
+    section: "Classroom Activity 📚",
+    src: ActivitySlide_11,
     caption: "Learning through guided tasks.",
   },
 
@@ -266,6 +345,133 @@ const activitySlide = [
     src: ActivitySlide_6,
     caption: "Parents race.",
   },
+  
+  {
+    section: "Sports & Recreation ⚽",
+    src: ActivitySlide_12,
+    caption: "outdoor games.",
+  },
 ];
 
-export { dataSlider, latestUpDate, faqs, activitySlide };
+const schoolFamily = [
+  {
+    id: 1,
+    image: TeachingStaff_1,
+    title: "Teaching Staff",
+    session: "2024 Academic Session",
+    badge: "2024/2025 Session",
+    description:
+      "Meet the passionate educators who inspire excellence, creativity, and confidence in every learner."
+  },
+
+  {
+    id: 2,
+    image: TeachingStaff_2,
+    title: "School",
+    session: "KG3 – Primary 5",
+    badge: "Academic Team",
+    description:
+      "Dedicated teachers providing engaging lessons that encourage curiosity, critical thinking, and lifelong learning."
+  },
+
+  {
+    id: 3,
+    image: TeachingStaff_3,
+    title: "Academic Team",
+    session: "Montessori Programme",
+    badge: "Early Years",
+    description:
+      "A caring team creating joyful experiences where every child's imagination and confidence can flourish."
+  },
+
+  {
+    id: 4,
+    image: TeachingStaff_4,
+    title: "Administrative Team",
+    session: "School Administration",
+    badge: "Leadership",
+    description:
+      "Supporting the smooth running of the school and ensuring a safe, welcoming environment for every family."
+  },
+
+  {
+    id: 5,
+    image: TeachingStaff_5,
+    title: "Academic Team",
+    session: "2025/2026 Session",
+    badge: "Dedication",
+    description:
+      "visitation"
+  },
+
+  {
+    id: 6,
+    image: TeachingStaff_6,
+    title: "Primary Session",
+    session: "2020 Session",
+    badge: "Class Teachers",
+    description:
+      "Empowering pupils with technology and digital skills needed for the future."
+  },
+
+  // {
+  //   id: 7,
+  //   image: TeachingStaff_6,
+  //   title: "PTA Executive Board",
+  //   session: "2025/2026 Session",
+  //   badge: "Parent Partnership",
+  //   description:
+  //     "Working hand in hand with the school to strengthen communication and promote educational excellence."
+  // }
+
+];
+
+const graduationData = [
+
+    {
+        id: 1,
+        year: "2026",
+        image: Graduation_1,
+        title: "Graduation Ceremony",
+        session: "2026 Academic Session",
+        pupils: "35 Graduates",
+        quote:
+            "Celebrating another year of excellence, confidence, and lifelong learning as our pupils take their next exciting step."
+    },
+
+    {
+        id: 2,
+        year: "2023",
+        image: Graduation_2,
+        title: "Graduation Ceremony",
+        session: "2023 Academic Session",
+        pupils: "50 Graduates",
+        quote:
+            "A memorable celebration of achievement, friendship and growth shared by pupils, parents and teachers."
+    },
+
+    {
+        id: 3,
+        year: "2018",
+        image: Graduation_3,
+        title: "Graduation Ceremony",
+        session: "2018 Academic Session",
+        pupils: "36 Graduates",
+        quote:
+            "Honouring our pupils for their hard work, determination and joyful learning journey."
+    },
+
+    {
+        id: 4,
+        year: "2022",
+        image: Graduation_1,
+        title: "Graduation Ceremony",
+        session: "2022 Academic Session",
+        pupils: "91 Graduates",
+        quote:
+            "Every graduation reminds us that every child can achieve greatness with the right guidance and care."
+    }
+
+];
+
+export { dataSlider, latestUpDate, faqs, activitySlide, stats, schoolFamily, graduationData};
