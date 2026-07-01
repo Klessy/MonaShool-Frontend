@@ -114,10 +114,10 @@ useEffect(() => {
     return (
 
         <section className="schoolFamily">
-            <div className="container">
-                <div className="schoolFamily__container">
+            <div className="schoolFamily__container">
+                {/* <div className="schoolFamily__container"> */}
                     {/* Header */}
-                    <div className="schoolFamily__header">
+                    <div className="schoolFamily__header container">
                         <span className="sectionBadge">
                             <FaUsers />
                             OUR SCHOOL FAMILY
@@ -205,7 +205,7 @@ useEffect(() => {
                                 ))}
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
 
             </div>
             
